@@ -1,0 +1,25 @@
+﻿<Window x:Class="cptRebours.Fen_Principale"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:cptRebours"
+        mc:Ignorable="d"
+        Title="cptRebours" Height="450" Width="800" ResizeMode="NoResize">
+    <Grid>
+        <Frame x:Name="_NavigationFrame" NavigationUIVisibility="Hidden" />
+        <Menu DockPanel.Dock="Top" Height="20" HorizontalAlignment="Stretch" VerticalAlignment="Top">
+            <MenuItem Header="Configuration"  >
+                <MenuItem Header="Période et Valeur de départ" Click="MenuItemConfiguration_Click"  />
+                <MenuItem Header="_Save" />
+                <Separator />
+                <MenuItem Header="_Exit" Click="MenuItemExit_Click"/>
+            </MenuItem>
+            <MenuItem Header="Ecran Déporté" >
+                <MenuItem Header="Activer" IsCheckable="True" IsChecked="False" Click="MenuItemEcran_Click" />
+            </MenuItem>
+        </Menu>
+        <Label x:Name="Label_cptRebours" Content="0" HorizontalAlignment="Left" Margin="363,82,0,0" VerticalAlignment="Top" FontSize="50" Width="37"/>
+        <Button x:Name="Bouton_Start" Content="START" HorizontalAlignment="Left" Margin="270,195,0,0" VerticalAlignment="Top" Height="89" Width="222" FontSize="40" Click="Bouton_Start_Click"/>
+    </Grid>
+</Window>
